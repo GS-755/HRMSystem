@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HRMSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AbsentLogs">
+    <Key>
+      <PropertyRef Name="IdAbsentType" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="IdAbsentType" Type="smallint" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AbsentTypes">
+    <Key>
+      <PropertyRef Name="IdAbsentType" />
+    </Key>
+    <Property Name="IdAbsentType" Type="smallint" Nullable="false" />
+    <Property Name="NameAbsentType" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EducationTypes">
+    <Key>
+      <PropertyRef Name="IdEduType" />
+    </Key>
+    <Property Name="IdEduType" Type="smallint" Nullable="false" />
+    <Property Name="NameEduType" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Bonus" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Dob" Type="datetime" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="IdPosition" Type="smallint" Nullable="false" />
+    <Property Name="IdEduType" Type="smallint" Nullable="false" />
+    <Property Name="IdState" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeStates">
+    <Key>
+      <PropertyRef Name="IdState" />
+    </Key>
+    <Property Name="IdState" Type="smallint" Nullable="false" />
+    <Property Name="NameState" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeTypes">
+    <Key>
+      <PropertyRef Name="IdType" />
+    </Key>
+    <Property Name="IdType" Type="smallint" Nullable="false" />
+    <Property Name="NameType" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InsuranceTypes">
+    <Key>
+      <PropertyRef Name="IdInsType" />
+    </Key>
+    <Property Name="IdInsType" Type="smallint" Nullable="false" />
+    <Property Name="NameInsType" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="PayPercent" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PositionTypes">
+    <Key>
+      <PropertyRef Name="IdPosition" />
+    </Key>
+    <Property Name="IdPosition" Type="smallint" Nullable="false" />
+    <Property Name="NamePosition" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="BaseSalary" Type="float" Nullable="false" />
+    <Property Name="IdWorkType" Type="smallint" Nullable="false" />
+    <Property Name="IdEmployeeTypes" Type="smallint" />
+  </EntityType>
+  <EntityType Name="SalaryLogs">
+    <Key>
+      <PropertyRef Name="IdLog" />
+    </Key>
+    <Property Name="IdLog" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="TotalSalary" Type="float" Nullable="false" />
+    <Property Name="PaidDate" Type="datetime" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="WorkLogs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="CheckinTime" Type="datetime" Nullable="false" />
+    <Property Name="CheckoutTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="WorkTypes">
+    <Key>
+      <PropertyRef Name="IdWorkType" />
+    </Key>
+    <Property Name="IdWorkType" Type="smallint" Nullable="false" />
+    <Property Name="NameWorkType" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Bonus" Type="float" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__AbsentLog__IdAbs__4E88ABD4">
+    <End Role="AbsentTypes" Type="Self.AbsentTypes" Multiplicity="1" />
+    <End Role="AbsentLogs" Type="Self.AbsentLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AbsentTypes">
+        <PropertyRef Name="IdAbsentType" />
+      </Principal>
+      <Dependent Role="AbsentLogs">
+        <PropertyRef Name="IdAbsentType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AbsentLogs__Id__4F7CD00D">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="AbsentLogs" Type="Self.AbsentLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AbsentLogs">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employees__IdEdu__45F365D3">
+    <End Role="EducationTypes" Type="Self.EducationTypes" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EducationTypes">
+        <PropertyRef Name="IdEduType" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="IdEduType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employees__IdPos__44FF419A">
+    <End Role="PositionTypes" Type="Self.PositionTypes" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PositionTypes">
+        <PropertyRef Name="IdPosition" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="IdPosition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employees__IdSta__46E78A0C">
+    <End Role="EmployeeStates" Type="Self.EmployeeStates" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeStates">
+        <PropertyRef Name="IdState" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="IdState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PositionT__IdEmp__3E52440B">
+    <End Role="EmployeeTypes" Type="Self.EmployeeTypes" Multiplicity="0..1" />
+    <End Role="PositionTypes" Type="Self.PositionTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeTypes">
+        <PropertyRef Name="IdType" />
+      </Principal>
+      <Dependent Role="PositionTypes">
+        <PropertyRef Name="IdEmployeeTypes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PositionT__IdWor__3D5E1FD2">
+    <End Role="WorkTypes" Type="Self.WorkTypes" Multiplicity="1" />
+    <End Role="PositionTypes" Type="Self.PositionTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkTypes">
+        <PropertyRef Name="IdWorkType" />
+      </Principal>
+      <Dependent Role="PositionTypes">
+        <PropertyRef Name="IdWorkType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SalaryLogs__Id__52593CB8">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="SalaryLogs" Type="Self.SalaryLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SalaryLogs">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WorkLogs__Employ__49C3F6B7">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="WorkLogs" Type="Self.WorkLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WorkLogs">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HRMSystemModelStoreContainer">
+    <EntitySet Name="AbsentLogs" EntityType="Self.AbsentLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AbsentTypes" EntityType="Self.AbsentTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EducationTypes" EntityType="Self.EducationTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeStates" EntityType="Self.EmployeeStates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeTypes" EntityType="Self.EmployeeTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InsuranceTypes" EntityType="Self.InsuranceTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PositionTypes" EntityType="Self.PositionTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalaryLogs" EntityType="Self.SalaryLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkLogs" EntityType="Self.WorkLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkTypes" EntityType="Self.WorkTypes" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__AbsentLog__IdAbs__4E88ABD4" Association="Self.FK__AbsentLog__IdAbs__4E88ABD4">
+      <End Role="AbsentTypes" EntitySet="AbsentTypes" />
+      <End Role="AbsentLogs" EntitySet="AbsentLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AbsentLogs__Id__4F7CD00D" Association="Self.FK__AbsentLogs__Id__4F7CD00D">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="AbsentLogs" EntitySet="AbsentLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employees__IdEdu__45F365D3" Association="Self.FK__Employees__IdEdu__45F365D3">
+      <End Role="EducationTypes" EntitySet="EducationTypes" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employees__IdPos__44FF419A" Association="Self.FK__Employees__IdPos__44FF419A">
+      <End Role="PositionTypes" EntitySet="PositionTypes" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employees__IdSta__46E78A0C" Association="Self.FK__Employees__IdSta__46E78A0C">
+      <End Role="EmployeeStates" EntitySet="EmployeeStates" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PositionT__IdEmp__3E52440B" Association="Self.FK__PositionT__IdEmp__3E52440B">
+      <End Role="EmployeeTypes" EntitySet="EmployeeTypes" />
+      <End Role="PositionTypes" EntitySet="PositionTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PositionT__IdWor__3D5E1FD2" Association="Self.FK__PositionT__IdWor__3D5E1FD2">
+      <End Role="WorkTypes" EntitySet="WorkTypes" />
+      <End Role="PositionTypes" EntitySet="PositionTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SalaryLogs__Id__52593CB8" Association="Self.FK__SalaryLogs__Id__52593CB8">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="SalaryLogs" EntitySet="SalaryLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WorkLogs__Employ__49C3F6B7" Association="Self.FK__WorkLogs__Employ__49C3F6B7">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="WorkLogs" EntitySet="WorkLogs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

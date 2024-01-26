@@ -1,0 +1,7 @@
+bin/
+.vscode/
+*/obj/Release
+*/obj/Debug/**.dll
+*/obj/Debug/**.pdb
+packages/
+TestResults/

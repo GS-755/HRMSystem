@@ -1,0 +1,12 @@
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\bin\Debug\HRMSystem.dll.config
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\bin\Debug\HRMSystem.dll
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\bin\Debug\HRMSystem.pdb
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\bin\Debug\EntityFramework.dll
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\bin\Debug\EntityFramework.SqlServer.dll
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\bin\Debug\EntityFramework.xml
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\bin\Debug\EntityFramework.SqlServer.xml
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\obj\Debug\HRMSystem.csproj.AssemblyReference.cache
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\obj\Debug\HRMSystem.csproj.CoreCompileInputs.cache
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\obj\Debug\HRMSystem.csproj.CopyComplete
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\obj\Debug\HRMSystem.dll
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\HRMSystem\obj\Debug\HRMSystem.pdb

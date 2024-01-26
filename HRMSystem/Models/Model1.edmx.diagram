@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7b86f7f286c948ab9e215a224ddc764a" Name="Diagram1" ZoomLevel="70">
+        <EntityTypeShape EntityType="HRMSystemModel.AbsentLog" Width="1.5" PointX="7.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMSystemModel.AbsentType" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMSystemModel.EducationType" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMSystemModel.Employee" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMSystemModel.EmployeeState" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMSystemModel.EmployeeType" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMSystemModel.InsuranceType" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMSystemModel.PositionType" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMSystemModel.SalaryLog" Width="1.5" PointX="7.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMSystemModel.WorkLog" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMSystemModel.WorkType" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="HRMSystemModel.FK__AbsentLog__IdAbs__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMSystemModel.FK__AbsentLogs__Id__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMSystemModel.FK__Employees__IdEdu__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMSystemModel.FK__Employees__IdPos__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMSystemModel.FK__Employees__IdSta__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMSystemModel.FK__SalaryLogs__Id__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMSystemModel.FK__WorkLogs__Employ__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMSystemModel.FK__PositionT__IdEmp__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMSystemModel.FK__PositionT__IdWor__3D5E1FD2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,15 @@
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\bin\Debug\OutputConsole.exe.config
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\bin\Debug\OutputConsole.exe
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\bin\Debug\OutputConsole.pdb
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\bin\Debug\EntityFramework.dll
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\bin\Debug\EntityFramework.SqlServer.dll
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\bin\Debug\HRMSystem.dll
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\bin\Debug\HRMSystem.pdb
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\bin\Debug\HRMSystem.dll.config
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\bin\Debug\EntityFramework.xml
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\bin\Debug\EntityFramework.SqlServer.xml
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\obj\Debug\OutputConsole.csproj.AssemblyReference.cache
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\obj\Debug\OutputConsole.csproj.CoreCompileInputs.cache
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\obj\Debug\OutputConsole.csproj.CopyComplete
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\obj\Debug\OutputConsole.exe
+E:\HUFLIT\BDCLPM\TH\Buoi2\HRMSystem\OutputConsole\obj\Debug\OutputConsole.pdb

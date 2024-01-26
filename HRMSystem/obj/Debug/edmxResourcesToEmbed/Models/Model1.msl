@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HRMSystemModelStoreContainer" CdmEntityContainer="HRMSystemEntities">
+    <EntitySetMapping Name="AbsentLogs">
+      <EntityTypeMapping TypeName="HRMSystemModel.AbsentLog">
+        <MappingFragment StoreEntitySet="AbsentLogs">
+          <ScalarProperty Name="IdAbsentType" ColumnName="IdAbsentType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AbsentTypes">
+      <EntityTypeMapping TypeName="HRMSystemModel.AbsentType">
+        <MappingFragment StoreEntitySet="AbsentTypes">
+          <ScalarProperty Name="IdAbsentType" ColumnName="IdAbsentType" />
+          <ScalarProperty Name="NameAbsentType" ColumnName="NameAbsentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EducationTypes">
+      <EntityTypeMapping TypeName="HRMSystemModel.EducationType">
+        <MappingFragment StoreEntitySet="EducationTypes">
+          <ScalarProperty Name="IdEduType" ColumnName="IdEduType" />
+          <ScalarProperty Name="NameEduType" ColumnName="NameEduType" />
+          <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="HRMSystemModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdPosition" ColumnName="IdPosition" />
+          <ScalarProperty Name="IdEduType" ColumnName="IdEduType" />
+          <ScalarProperty Name="IdState" ColumnName="IdState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeStates">
+      <EntityTypeMapping TypeName="HRMSystemModel.EmployeeState">
+        <MappingFragment StoreEntitySet="EmployeeStates">
+          <ScalarProperty Name="IdState" ColumnName="IdState" />
+          <ScalarProperty Name="NameState" ColumnName="NameState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeTypes">
+      <EntityTypeMapping TypeName="HRMSystemModel.EmployeeType">
+        <MappingFragment StoreEntitySet="EmployeeTypes">
+          <ScalarProperty Name="IdType" ColumnName="IdType" />
+          <ScalarProperty Name="NameType" ColumnName="NameType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsuranceTypes">
+      <EntityTypeMapping TypeName="HRMSystemModel.InsuranceType">
+        <MappingFragment StoreEntitySet="InsuranceTypes">
+          <ScalarProperty Name="IdInsType" ColumnName="IdInsType" />
+          <ScalarProperty Name="NameInsType" ColumnName="NameInsType" />
+          <ScalarProperty Name="PayPercent" ColumnName="PayPercent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PositionTypes">
+      <EntityTypeMapping TypeName="HRMSystemModel.PositionType">
+        <MappingFragment StoreEntitySet="PositionTypes">
+          <ScalarProperty Name="IdPosition" ColumnName="IdPosition" />
+          <ScalarProperty Name="NamePosition" ColumnName="NamePosition" />
+          <ScalarProperty Name="BaseSalary" ColumnName="BaseSalary" />
+          <ScalarProperty Name="IdWorkType" ColumnName="IdWorkType" />
+          <ScalarProperty Name="IdEmployeeTypes" ColumnName="IdEmployeeTypes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalaryLogs">
+      <EntityTypeMapping TypeName="HRMSystemModel.SalaryLog">
+        <MappingFragment StoreEntitySet="SalaryLogs">
+          <ScalarProperty Name="IdLog" ColumnName="IdLog" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TotalSalary" ColumnName="TotalSalary" />
+          <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkLogs">
+      <EntityTypeMapping TypeName="HRMSystemModel.WorkLog">
+        <MappingFragment StoreEntitySet="WorkLogs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="CheckinTime" ColumnName="CheckinTime" />
+          <ScalarProperty Name="CheckoutTime" ColumnName="CheckoutTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkTypes">
+      <EntityTypeMapping TypeName="HRMSystemModel.WorkType">
+        <MappingFragment StoreEntitySet="WorkTypes">
+          <ScalarProperty Name="IdWorkType" ColumnName="IdWorkType" />
+          <ScalarProperty Name="NameWorkType" ColumnName="NameWorkType" />
+          <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
